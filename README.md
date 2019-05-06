@@ -32,7 +32,7 @@ For those paralyzed from the neck down (quadriplegic), simple tasks such as shor
 
 ## Milestones
 1. Connecting Neurosky to Raspberry Pi over Bluetooth
-2. Printing to the terminal raw EEG values, concerntration values, and meditation values of the user wearing the Neurosky
+2. Printing to the terminal raw EEG values, concentration values, and meditation values of the user wearing the Neurosky
 3. Building the GoPiGo
 4. Using Neurosky output values to map forward/backward movements on the GoPiGo
 5. Mapping Neurosky outputs to individual wheel motors for left/right movements on the GoPiGo
