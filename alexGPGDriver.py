@@ -69,7 +69,7 @@ try:
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
     	if dataPoint.__class__.__name__ == 'AttentionDataPoint':
     		print dataPoint
-			dataPoint = int(str(dataPoint))
+    		dataPoint = int(str(dataPoint))
 			'''
 			threshold = 0
 			#update sliding window
