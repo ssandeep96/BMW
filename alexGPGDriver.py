@@ -40,7 +40,7 @@ for i in range(0, int(windowLength)):
 
 #keep track of how long the test lasted
 time_beforeTry = time.clock()
-print "preparation time: " + str(time_beforeTry - time_topline) " seconds"
+print "preparation time: " + str(time_beforeTry - time_topline) + " seconds"
 #control loop for pi
 
 
