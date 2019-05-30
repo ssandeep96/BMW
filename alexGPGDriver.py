@@ -94,7 +94,7 @@ try:
 			print dataPoint
 			print blinkTime
 except: KeyboardInterrupt()
-GPG.stop()
+#GPG.stop()
 #output results to csv:
 #try: 
 #OutputToCSV()
