@@ -70,29 +70,25 @@ try:
     	if dataPoint.__class__.__name__ == 'AttentionDataPoint':
     		print dataPoint
     		dataPoint = int(str(dataPoint))
-			'''
-			threshold = 0
-			#update sliding window
+'''
+threshold = 0
+#update sliding window
 
 
-			#update threshold
-			if np.var(sW) > 10:
-				threshold = 1
+#update threshold
+if np.var(sW) > 10:
+threshold = 1
 
-			#Tell it to start or stop
-			'''
+#Tell it to start or stop
+'''
 			if threshold:
-				GPG.forward()
+			GPG.forward()
 			else: GPG.stop()
-
 		if dataPoint.__class__.__name__ == 'MeditationDataPoint':
 			print dataPoint
-
 		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
 			print dataPoint
-
 except: KeyboardInterrupt()
-
 GPG.stop()
 #output results to csv:
 '''
