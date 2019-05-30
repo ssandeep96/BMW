@@ -32,11 +32,11 @@ GPG = easygopigo3.EasyGoPiGo3()
 #################### GLOBAL VARIABLES & FUNCTIONS ##############################################
 
 #Get width of moving average window:
-windowLength = input("How many datapoints for the moving window? ")
+#windowLength = input("How many datapoints for the moving window? ")
 #make sudo queue for simple moving average
-sma = []
-for i in range(0, int(windowLength)):
-	sma.append(0)
+#sma = []
+#for i in range(0, int(windowLength)):
+#sma.append(0)
 
 #keep track of how long the test lasted
 time_beforeTry = time.clock()
@@ -68,7 +68,9 @@ try:
 		pingStart = time.clock()
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
     	if dataPoint.__class__.__name__ == 'AttentionDataPoint':
+    		attentionTime = time.clock() - pingStart
     		print dataPoint
+    		print attentionTime
     		dataPoint = int(str(dataPoint))
 
 #threshold = 0
@@ -84,9 +86,13 @@ try:
 #GPG.forward()
 #else: GPG.stop()
 		if dataPoint.__class__.__name__ == 'MeditationDataPoint':
+			meditationTime = time.clock() - pingStart
 			print dataPoint
+			print meditationTime
 		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
+			blinkTime = time.clock() - pingStart
 			print dataPoint
+			print blinkTime
 except: KeyboardInterrupt()
 GPG.stop()
 #output results to csv:
