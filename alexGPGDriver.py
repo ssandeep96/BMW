@@ -69,8 +69,8 @@ try:
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
     	if dataPoint.__class__.__name__ == 'AttentionDataPoint':
     		attentionTime = time.clock() - pingStart
-    		print dataPoint
-    		print attentionTime
+    		print str(dataPoint)
+    		print str(attentionTime)
     		dataPoint = int(str(dataPoint))
 
 #threshold = 0
@@ -87,12 +87,12 @@ try:
 #else: GPG.stop()
 		if dataPoint.__class__.__name__ == 'MeditationDataPoint':
 			meditationTime = time.clock() - pingStart
-			print dataPoint
-			print meditationTime
+			print str(dataPoint)
+			print str(meditationTime)
 		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
 			blinkTime = time.clock() - pingStart
-			print dataPoint
-			print blinkTime
+			print str(dataPoint)
+			print str(blinkTime)
 except: KeyboardInterrupt()
 #GPG.stop()
 #output results to csv:
