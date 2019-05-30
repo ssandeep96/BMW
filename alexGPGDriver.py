@@ -40,7 +40,7 @@ for i in range(0, int(windowLength)):
 
 #keep track of how long the test lasted
 time_beforeTry = time.clock()
-print "preparation time: " + str(time_beforeTry - time_topline)
+print "preparation time: " + str(time_beforeTry - time_topline) " seconds"
 #control loop for pi
 
 
@@ -64,12 +64,13 @@ def OutputToCSV():
 ################### BEGIN CONTROL CODE #############################################
 try:
 	while(True):
-		
 		#grab a datapoint from Neurosky
+		pingStart = time.clock()
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
     	if dataPoint.__class__.__name__ == 'AttentionDataPoint':
-			print dataPoint
+    		print dataPoint
 			dataPoint = int(str(dataPoint))
+			'''
 			threshold = 0
 			#update sliding window
 
@@ -79,18 +80,28 @@ try:
 				threshold = 1
 
 			#Tell it to start or stop
+			'''
 			if threshold:
 				GPG.forward()
 			else: GPG.stop()
+
+		if dataPoint.__class__.__name__ == 'MeditationDataPoint':
+			print dataPoint
+
+		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
+			print dataPoint
 
 except: KeyboardInterrupt()
 
 GPG.stop()
 #output results to csv:
+'''
 try: 
-	OutputToCSV():
+	OutputToCSV()
 	print "Trial ended, data successfully recorded..."
 except: print "Error writing to csv, ending program..."
+'''
+
 
 
 
