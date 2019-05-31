@@ -66,8 +66,12 @@ try:
 	while(True):
 #grab a datapoint from Neurosky
 		pingStart = time.clock()
+<<<<<<< HEAD
 		print "checkpoint"
 	    	dataPoint = mindwaveDataPointReader.readNextDataPoint()
+=======
+    	dataPoint = mindwaveDataPointReader.readNextDataPoint()
+>>>>>>> 70cdceba2c93385d5cb82d9ec1553e9f3af9c1ce
 		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
 			blinkTime = time.clock() - pingStart
 			print str(dataPoint)
