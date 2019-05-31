@@ -68,28 +68,6 @@ try:
 		pingStart = time.clock()
 		print "checkpoint"
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
-    	if dataPoint.__class__.__name__ == 'AttentionDataPoint':
-    		attentionTime = time.clock() - pingStart
-    		print str(dataPoint)
-    		print str(attentionTime)
-    		dataPoint = int(str(dataPoint))
-
-#threshold = 0
-#update sliding window
-
-
-#update threshold
-#if np.var(sW) > 10:
-#threshold = 1
-
-#Tell it to start or stop
-#if threshold:
-#GPG.forward()
-#else: GPG.stop()
-		if dataPoint.__class__.__name__ == 'MeditationDataPoint':
-			meditationTime = time.clock() - pingStart
-			print str(dataPoint)
-			print str(meditationTime)
 		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
 			blinkTime = time.clock() - pingStart
 			print str(dataPoint)
