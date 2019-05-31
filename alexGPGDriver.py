@@ -68,6 +68,7 @@ try:
 		pingStart = time.clock()
 		print "checkpoint"
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
+    	print dataPoing.__class__.__name__
 		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
 			blinkTime = time.clock() - pingStart
 			print str(dataPoint)
