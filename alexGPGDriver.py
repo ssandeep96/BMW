@@ -47,11 +47,11 @@ print "preparation time: " + str(time_beforeTry - time_topline) + " seconds"
 #initialize array for output to csv
 results = []
 def ProcessDataForCSV():
-	#append what we want for final results
-	#results.append("***")
+#append what we want for final results
+#results.append("***")
 
-	#format of results row entry:
-	#[]
+#format of results row entry:
+#[]
 
 	return
 def OutputToCSV():
@@ -64,11 +64,10 @@ def OutputToCSV():
 ################### BEGIN CONTROL CODE #############################################
 try:
 	while(True):
-		#grab a datapoint from Neurosky
+#grab a datapoint from Neurosky
 		pingStart = time.clock()
 		print "checkpoint"
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
-    	print dataPoint.__class__.__name__
 		if dataPoint.__class__.__name__ == 'BlinkDataPoint':
 			blinkTime = time.clock() - pingStart
 			print str(dataPoint)
