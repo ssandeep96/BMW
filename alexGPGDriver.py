@@ -66,6 +66,7 @@ try:
 	while(True):
 		#grab a datapoint from Neurosky
 		pingStart = time.clock()
+		print "checkpoint"
     	dataPoint = mindwaveDataPointReader.readNextDataPoint()
     	if dataPoint.__class__.__name__ == 'AttentionDataPoint':
     		attentionTime = time.clock() - pingStart
