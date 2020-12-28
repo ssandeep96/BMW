@@ -1,1 +1,1 @@
-Here are all the presentations throughout the quarter
+Here are all the presentations throughout the quarter.
